@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: service-nginx_podslb
+spec:
+  type: LoadBalancer
+  selector:
+    app: nginx_pods
+  ports:
+    - port: 80
+      targetPort: 80
